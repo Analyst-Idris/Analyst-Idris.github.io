@@ -241,31 +241,35 @@
 
   /* ── ABOUT ── */
   .about-grid {
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 5rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
   }
 
   .about-photo-wrap {
     position: relative;
+    width: 220px;
+    flex-shrink: 0;
   }
 
   .about-photo {
-    width: 100%;
-    aspect-ratio: 3/4;
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 4px;
-    filter: grayscale(20%);
+    object-position: top center;
+    border-radius: 50%;
+    border: 3px solid var(--amber);
     display: block;
+    filter: grayscale(10%);
   }
 
   .about-photo-placeholder {
-    width: 100%;
-    aspect-ratio: 3/4;
-    border-radius: 4px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
     background: var(--bg3);
-    border: 0.5px solid var(--border);
+    border: 3px solid var(--amber);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -292,6 +296,12 @@
     color: var(--amber);
   }
 
+  .about-text {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+  }
+
   .about-text p {
     color: var(--muted);
     font-size: 1rem;
@@ -310,6 +320,7 @@
     margin-top: 2.5rem;
     padding-top: 2rem;
     border-top: 0.5px solid var(--border);
+    justify-content: center;
   }
 
   .stat-item { text-align: center; }
@@ -669,7 +680,7 @@
     nav ul { gap: 1.2rem; }
     section { padding: 5rem 1.5rem; }
     .projects-inner { padding: 0 1.5rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-photo-wrap { width: 180px; } .about-photo { width: 180px; height: 180px; }
     .about-photo-placeholder { aspect-ratio: 16/9; }
     .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
     .form-row { grid-template-columns: 1fr; }
@@ -725,12 +736,12 @@
     </div>
     <div class="about-text">
       <p>
-        I'm <strong>Idris Oladejo</strong>, a Data Analyst and Machine Learning Engineer with hands-on experience
+        I am <strong>Idris Oladejo</strong>, a Data Analyst and Machine Learning Engineer with hands-on experience
         building end-to-end predictive analytics solutions, business intelligence dashboards, and
-        data-driven decision-support tools — based at <strong>Classic Tech-Hub</strong>.
+        data-driven decision-support tools — based at <strong>DATA MENTOR HUB</strong>.
       </p>
       <p>
-        I'm proficient in <strong>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)</strong>, supervised
+        I am proficient in <strong>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)</strong>, supervised
         machine learning (regression, classification), model evaluation, and deployment using <strong>Streamlit</strong>.
         I also bring a strong foundation in <strong>SQL, Power BI (DAX, Power Query)</strong>, and
         <strong>Microsoft Excel</strong> for BI and analytics reporting — plus <strong>R (ggplot2, dplyr, caret)</strong>
@@ -738,7 +749,7 @@
       </p>
       <p>
         As an experienced <strong>Data Analysis Instructor</strong>, I develop curricula, mentor aspiring analysts,
-        and communicate complex findings to both technical and non-technical stakeholders. I'm committed to
+        and communicate complex findings to both technical and non-technical stakeholders. I am committed to
         solving real-world business problems through machine learning, statistical analysis, and actionable data storytelling.
       </p>
       <div class="about-stats">
